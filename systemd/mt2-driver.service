@@ -1,0 +1,11 @@
+[Unit]
+Description=Magic Trackpad 2 userspace multitouch driver
+
+[Service]
+# Adjust the path to where this repository is checked out.
+ExecStart=/usr/bin/python3 %h/programming/magic-trackpad-2-linux-userspace/mt2_driver.py
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target
